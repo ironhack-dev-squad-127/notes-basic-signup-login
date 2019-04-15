@@ -1,0 +1,21 @@
+
+<h1>Signup</h1>
+
+{{!-- Redirect the user to "POST /signup" --}}
+<form id="form" action="/signup" method="POST">
+  <label for="username">Username</label><br>
+  {{!-- Define a req.body.username --}}
+  <input type="text" name="username"
+    placeholder="Your username">
+
+  <label for="password">Password</label><br>
+  {{!-- Define a req.body.password --}}
+  <input type="password" name="password"
+    placeholder="********">
+
+  <button type="submit">Create account</button>
+</form>
+
+{{#if errorMessage}}
+  <div class="error-message">{{ errorMessage }}</div>
+{{/if}}
